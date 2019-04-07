@@ -436,7 +436,8 @@ public class MainActivity extends Activity {
         builder
                 .setView(ll)
                 .setMessage("If you wish, change the rating for " + storeName)
-                .setPositiveButton("Done!", (dialog, which) -> this.setStoreRating(storeName, rating[0]));
+                .setPositiveButton("Done!", (dialog, which) -> this.setStoreRating(storeName, rating[0]))
+                .setNegativeButton("No Thanks.", (dialog, which) -> {});
         builder.create().show();
     }
 
